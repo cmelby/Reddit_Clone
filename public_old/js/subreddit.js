@@ -82,9 +82,16 @@ let renderPostsForSub = results => {
         `Posted in <a class = subLink id =${result.Sub.id} href='/subs/${result.Sub.title}'> ${result.Sub.title} 
           </a> by 
           ${result.User.user_name}
-          at ${result.createdAt}`
+         `
       );
-      rightRow1.append(posterInfo);
+          // JSON encoded date
+    var dateStr = JSON.parse(result.createdAt);  
+    console.log(dateStr); 
+    var date = new Date(dateStr);
+    console.log(date);  
+
+      rightRow1.append(posterInfo, date);
+      // at ${result.createdAt}
 
       let title = $("<h5>")
         .addClass("mb-0")

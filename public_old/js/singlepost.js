@@ -62,11 +62,11 @@ let renderComments = res => {
     });
     let dateCreated = $("<p>")
       .addClass("font-weight-light")
-      .text(results.createdAt);
+      // .text(); results.createdAt
     let userComment = $("<p>")
       .addClass("font-weight-normal")
       .text(results.body);
-    commentRow.append(userName, dateCreated, $("<hr>"), userComment);
+    commentRow.append(userName, $("<hr>"), userComment);
     commentList.append(commentRow);
     let card = $("<div>")
       .addClass("card mb-3 p-3")

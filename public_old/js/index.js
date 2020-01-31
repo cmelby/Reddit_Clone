@@ -14,21 +14,9 @@ let userId = localStorage.getItem("user");
 //============================== Functionality ========================//
 let renderPostFeed = (data, empty) => {
   if (data) {
-    // if (empty) {
-    //   renderPosts(data);
-
-    //   post.empty().append($("<hr>"));
-
-    //   arrayOfPosts.sort(
-    //     (a, b) => a[0].getAttribute("value") - b[0].getAttribute("value")
-    //   );
-    //   for (let i = arrayOfPosts.length; i > -1; i--) {
-    //     post.append(arrayOfPosts[i]);
-    //   }
-    // } else {
 
     renderPosts(data);
-    // }
+
   } else {
     getPosts().then(results => {
       renderPosts(results);
@@ -99,8 +87,14 @@ let renderPosts = results => {
       `Posted in <a class = subLink id =${result.Sub.id} href='/subs/${result.Sub.title}'> ${result.Sub.title} 
         </a> by 
         ${result.User.user_name}
-        at ${result.createdAt}`
+        at`
     );
+    // JSON encoded date
+    var dateStr = JSON.parse(result.createdAt);  
+    console.log(dateStr); 
+    var date = new Date(dateStr);
+    console.log(date);  
+   
     rightRow1.append(posterInfo);
 
     let title = $("<h5>")
