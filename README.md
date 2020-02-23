@@ -5,6 +5,7 @@
 Reddit_Clone is an application that mimics the main functionality of the popular discussion forum Reddit. The goal was to use this as a challenge to understand complex database associations and how user actions on the front end magnify that complexity. On Reddit_Clone you can see the post feed upon coming to the site however until you have created an account you will be limiited to simply viewing the posts. Once an account has been created you will be able to up vote/down vote on posts, join and creat subreddits, and leave comments on individual posts. Some of the features so far are being able to sort the feed by the most popular or "upvoted" post, as well as by your own subreddits. This application also features search, where you can find individual subreddits. And of course you can create a post and comment on posts. 
 
 ## Demo
+This application was configured for and deployed to Heroku at: https://quiet-lake-98090.herokuapp.com/
 ![Site](Assets/siteDemo.gif) 
 
  
